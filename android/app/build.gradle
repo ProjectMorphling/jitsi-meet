@@ -96,6 +96,7 @@ dependencies {
     }
 
     implementation project(':sdk')
+    implementation project(":spot")
 }
 
 gradle.projectsEvaluated {
