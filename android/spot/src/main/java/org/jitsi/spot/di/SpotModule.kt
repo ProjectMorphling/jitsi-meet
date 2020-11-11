@@ -2,7 +2,6 @@ package org.jitsi.spot.di
 
 import org.jitsi.spot.domain.AudioService
 import org.jitsi.spot.domain.Logger
-import org.jitsi.spot.domain.MeetingService
 import org.jitsi.spot.domain.PairingService
 import org.jitsi.spot.presentation.TVFragment
 import org.jitsi.spot.presentation.TVNavigationService
@@ -23,9 +22,8 @@ class SpotModule(private val tvFragment: TVFragment) {
         audioService: AudioService,
         tvNavigationService: TVNavigationService,
         pairingService: PairingService,
-        meetingService: MeetingService,
         logger: Logger
     ): TVViewModel {
-        return TVViewModel(audioService, tvNavigationService, pairingService, meetingService, logger)
+        return TVViewModel(audioService, tvNavigationService, pairingService, logger)
     }
 }

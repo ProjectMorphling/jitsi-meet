@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 
 // Crashlytics integration is done as part of Firebase now, so it gets
 // automagically activated with google-services.json
@@ -94,6 +95,9 @@ dependencies {
         implementation 'com.google.firebase:firebase-crashlytics:17.2.1'
         implementation 'com.google.firebase:firebase-dynamic-links:19.1.0'
     }
+
+    implementation "com.google.dagger:dagger:2.29.1"
+    kapt "com.google.dagger:dagger-compiler:2.29.1"
 
     implementation project(':sdk')
     implementation project(":spot")

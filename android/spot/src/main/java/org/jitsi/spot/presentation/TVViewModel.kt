@@ -6,18 +6,13 @@ import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
 import androidx.databinding.ObservableField
 import org.jitsi.spot.domain.*
-import io.reactivex.disposables.Disposable
 
 class TVViewModel(
     private val audioService: AudioService,
     private val tvNavigationService: TVNavigationService,
     private val pairingService: PairingService,
-    private val meetingService: MeetingService,
     private val logger: Logger
 ) : LifecycleObserver {
-
-    private var micMuteStateChangeSubcription: Disposable? = null
-    private var pairingCodeSubcription: Disposable? = null
 
     val tvUrl = ObservableField<String>()
     val pairingCode = ObservableField<String>()
@@ -42,16 +37,11 @@ class TVViewModel(
     @OnLifecycleEvent(Lifecycle.Event.ON_START)
     fun onStartEvent() {
         logger.log(tag, "started")
-        micMuteStateChangeSubcription =
-            audioService.registerForMicMuteStateChange { onMicMuteStateChanged(it) }
-        pairingCodeSubcription = pairingService.registerForPairingCode { onPairingCodeChanged(it) }
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
     fun onStopEvent() {
         logger.log(tag, "stopped")
-        micMuteStateChangeSubcription?.dispose()
-        pairingCodeSubcription?.dispose()
     }
 
     fun onPageLoaded() {
@@ -87,7 +77,6 @@ class TVViewModel(
 
     fun onMeetingStatusUpdated(status: MeetingStatus) {
         logger.log(tag, "meeting status updated: $status")
-        meetingService.setMeetingStatus(status)
     }
 
     private fun onMicMuteStateChanged(isMuted: Boolean) {

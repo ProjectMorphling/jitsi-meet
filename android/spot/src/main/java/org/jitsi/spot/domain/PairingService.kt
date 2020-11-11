@@ -9,7 +9,5 @@ interface PairingService {
 
     fun onSpotPageLoaded()
 
-    fun registerForPairingCode(onPairingCodeReceived: (String) -> Unit): Disposable
-
     fun onReset()
 }
