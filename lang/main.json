@@ -888,6 +888,7 @@
         "roomnameHint": "Enter the name or URL of the room you want to join. You may make a name up, just let the people you are meeting know it so that they enter the same name.",
         "sendFeedback": "Send feedback",
         "secureMeetings": "Secure and high quality meetings",
+        "spotList":"Rooms",
         "startMeeting": "Start meeting",
         "terms": "Terms",
         "title": "Secure, fully featured, and completely free video conferencing"
@@ -931,5 +932,11 @@
         "passwordJoinButton": "Join",
         "reject": "Reject",
         "toggleLabel": "Enable lobby"
+    },
+    "spot": {
+        "devicesSection": "Nearby devices",
+        "joinHere": "Join here",
+        "noDevices": "No devices have been found",
+        "remote": "Spot TV Remote"
     }
 }

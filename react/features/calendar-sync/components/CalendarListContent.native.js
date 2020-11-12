@@ -7,10 +7,12 @@ import {
     createCalendarSelectedEvent,
     sendAnalytics
 } from '../../analytics';
-import { appNavigate } from '../../app/actions';
+//import { appNavigate } from '../../app/actions';
+import { openDialog } from '../../base/dialog/actions';
 import { getLocalizedDateFormatter, translate } from '../../base/i18n';
 import { NavigateSectionList } from '../../base/react';
 import { connect } from '../../base/redux';
+import { SpotDevicesMenu } from '../../spot/components';
 import { refreshCalendar, openUpdateCalendarEventDialog } from '../actions';
 
 
@@ -120,7 +122,8 @@ class CalendarListContent extends Component<Props> {
     _onPress(url, analyticsEventName = 'calendar.meeting.tile') {
         sendAnalytics(createCalendarClickedEvent(analyticsEventName));
 
-        this.props.dispatch(appNavigate(url));
+        //this.props.dispatch(appNavigate(url));
+        this.props.dispatch(openDialog(SpotDevicesMenu, { meeting: url }));
     }
 
     _onRefresh: () => void;

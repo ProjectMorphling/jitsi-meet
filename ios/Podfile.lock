@@ -351,6 +351,8 @@ PODS:
     - React-jsi (= 0.61.5-jitsi.2)
     - ReactCommon/jscallinvoker (= 0.61.5-jitsi.2)
     - ReactCommon/turbomodule/core (= 0.61.5-jitsi.2)
+  - ReactNativeBeaconsManager (1.1.0):
+    - React
   - RNCAsyncStorage (1.3.4):
     - React
   - RNDefaultPreference (1.4.2):
@@ -410,6 +412,7 @@ DEPENDENCIES:
   - React-RCTText (from `../node_modules/react-native/Libraries/Text`)
   - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
   - ReactCommon/turbomodule (from `../node_modules/react-native/ReactCommon`)
+  - ReactNativeBeaconsManager (from `../node_modules/react-native-beacons-manager`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-community/async-storage`)"
   - RNDefaultPreference (from `../node_modules/react-native-default-preference`)
   - "RNGoogleSignin (from `../node_modules/@react-native-community/google-signin`)"
@@ -506,6 +509,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/Libraries/Vibration"
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
+  ReactNativeBeaconsManager:
+    :path: "../node_modules/react-native-beacons-manager"
   RNCAsyncStorage:
     :path: "../node_modules/@react-native-community/async-storage"
   RNDefaultPreference:
@@ -574,6 +579,7 @@ SPEC CHECKSUMS:
   React-RCTText: 4f1b99f228278d2a5e9008eced8dc9c974c4a270
   React-RCTVibration: c1041024893fdfdb8371e7c720c437751b711676
   ReactCommon: 18014e1d98dbeb9141e935cfe35fc93bd511ffb6
+  ReactNativeBeaconsManager: dd0b01841445881989af5be9ab83153d1cdaa6b7
   RNCAsyncStorage: 8e31405a9f12fbf42c2bb330e4560bfd79c18323
   RNDefaultPreference: 56a405ce61033ac77b95004dccd7ac54c2eb50d1
   RNGoogleSignin: 39336070b35fc4cea6a98cf111e00480317be0ae
@@ -582,6 +588,6 @@ SPEC CHECKSUMS:
   RNWatch: a5320c959c75e72845c07985f3e935e58998f1d3
   Yoga: 96b469c5e81ff51b917b92e8c3390642d4ded30c
 
-PODFILE CHECKSUM: f2400f8e5a52c4d91697cbacba6956569efc5ab8
+PODFILE CHECKSUM: c5ddcaa93b8247edc1caa7da0e64d5f3fa7fe916
 
 COCOAPODS: 1.9.3

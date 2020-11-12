@@ -101,5 +101,17 @@
 	<false/>
 	<key>FirebaseCrashlyticsCollectionEnabled</key>
 	<string>false</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Discover nearby rooms</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Discover nearby rooms</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Discover nearby rooms</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Discover nearby rooms</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>Discover nearby rooms</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>Discover nearby rooms</string>
 </dict>
 </plist>

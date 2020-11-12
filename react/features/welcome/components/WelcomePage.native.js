@@ -25,6 +25,7 @@ import {
 import { HelpView } from '../../help';
 import { DialInSummary } from '../../invite';
 import { SettingsView } from '../../settings';
+import { SpotRemoteView } from '../../spot/components';
 import { setSideBarVisible } from '../actions';
 
 import {
@@ -349,7 +350,8 @@ class WelcomePage extends AbstractWelcomePage {
         return [
             <HelpView key = 'helpView' />,
             <DialInSummary key = 'dialInSummary' />,
-            <SettingsView key = 'settings' />
+            <SettingsView key = 'settings' />,
+            <SpotRemoteView key = 'spotRemote' />
         ];
     }
 }

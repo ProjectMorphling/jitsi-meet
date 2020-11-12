@@ -3,11 +3,12 @@
 import React, { Component } from 'react';
 
 import { translate } from '../../base/i18n';
-import { IconEventNote, IconRestore } from '../../base/icons';
+import { IconEventNote, IconRestore, IconShareDesktop } from '../../base/icons';
 import { PagedList } from '../../base/react';
 import { connect } from '../../base/redux';
 import { CalendarList, isCalendarEnabled } from '../../calendar-sync';
 import { RecentList } from '../../recent-list';
+import { SpotDevicesList } from '../../spot/components';
 import { setWelcomePageListsDefaultPage } from '../actions';
 
 /**
@@ -83,6 +84,16 @@ class WelcomePageLists extends Component<Props> {
                     component: CalendarList,
                     icon: IconEventNote,
                     title: t('welcomepage.calendar')
+                }
+            );
+        }
+
+        if (navigator.product === 'ReactNative') {
+            pages.push(
+                {
+                    component: SpotDevicesList,
+                    icon: IconShareDesktop,
+                    title: t('welcomepage.spotList')
                 }
             );
         }

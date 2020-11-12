@@ -8,6 +8,7 @@ import { openDialog } from '../../base/dialog/actions';
 import { translate } from '../../base/i18n';
 import { NavigateSectionList, type Section } from '../../base/react';
 import { connect } from '../../base/redux';
+import { SpotDevicesMenu } from '../../spot/components';
 import { isRecentListEnabled, toDisplayableList } from '../functions';
 
 import AbstractRecentList from './AbstractRecentList';
@@ -90,6 +91,19 @@ class RecentList extends AbstractRecentList<Props> {
                     = { this._getRenderListEmptyComponent() }
                 sections = { recentList } />
         );
+    }
+
+    _onPress: string => void;
+
+    /**
+     * Handles the list's navigate action.
+     *
+     * @private
+     * @param {string} url - The url string to navigate to.
+     * @returns {void}
+     */
+    _onPress(url) {
+        this.props.dispatch(openDialog(SpotDevicesMenu, { meeting: url }));
     }
 
     _onLongPress: (Object) => void;
