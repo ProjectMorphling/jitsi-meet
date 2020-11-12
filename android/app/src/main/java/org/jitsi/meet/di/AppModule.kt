@@ -22,7 +22,7 @@ class AppModule(private val context: Context) {
     @Singleton
     @Provides
     fun providePairingService(): PairingService {
-        return TvPairingService()
+        return TvPairingService(context)
     }
 
     @Singleton

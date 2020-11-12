@@ -90,9 +90,8 @@ class TVViewModel(
     }
 
     companion object {
-        private const val SPOT_TV_URL =
-            "https://spot.8x8.vc/" +
-                    "tv?llpc=%s&skipPairRemote=true&skipSelectMedia=true&volumeControlSupported=true"
+        private const val SPOT_TV_URL = "http://192.168.100.69:8000/tv?llpc=%s&skipPairRemote=true&skipSelectMedia=true&volumeControlSupported=true"
+         //   "https://spot.8x8.vc/tv?llpc=%s&skipPairRemote=true&skipSelectMedia=true&volumeControlSupported=true"
         private val tag = TVViewModel::class.java.simpleName
     }
 }

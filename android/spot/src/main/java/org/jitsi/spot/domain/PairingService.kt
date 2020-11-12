@@ -1,7 +1,5 @@
 package org.jitsi.spot.domain
 
-import io.reactivex.disposables.Disposable
-
 interface PairingService {
     fun onJoinCodeUpdated(code: String?)
 

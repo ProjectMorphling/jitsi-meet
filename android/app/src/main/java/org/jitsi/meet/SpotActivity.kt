@@ -5,6 +5,7 @@ import androidx.fragment.app.FragmentActivity
 import org.jitsi.spot.di.ComponentHolder
 import org.jitsi.spot.presentation.TVFragment
 
+
 class SpotActivity : FragmentActivity(), ComponentHolder {
 
     override fun onCreate(savedInstanceState: Bundle?) {
