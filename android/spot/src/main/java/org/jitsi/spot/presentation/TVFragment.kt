@@ -88,8 +88,9 @@ class TVFragment : Fragment() {
             webView.settings.javaScriptEnabled = true
             webView.settings.domStorageEnabled = true
 
-            val newUA = webView.settings.userAgentString.replace("Mobile", "eliboM")
-                .replace("Android", "diordnA")
+            val newUA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.185 Safari/537.36"
+
+                //webView.settings.userAgentString.replace("Mobile", "eliboM").replace("Android", "diordnA")
 
             webView.settings.userAgentString = newUA
 

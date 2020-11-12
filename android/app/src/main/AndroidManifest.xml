@@ -24,8 +24,7 @@
             android:name=".SpotActivity"
             android:banner="@drawable/ic_jitsi_logosvg"
             android:icon="@drawable/ic_jitsi_logosvg"
-            android:logo="@drawable/ic_jitsi_logosvg"
-            android:screenOrientation="landscape">
+            android:logo="@drawable/ic_jitsi_logosvg">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
