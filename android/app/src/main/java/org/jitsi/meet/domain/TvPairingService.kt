@@ -24,12 +24,11 @@ class TvPairingService(private val context: Context) : PairingService {
                     .setId1("bf23c311-24ae-414b-b153-cf097836947f")
                     .setId2(major)
                     .setId3(minor)
-                    .setDataFields(listOf(0L, 1L))
-                    .setManufacturer(0x0118)
+                    .setManufacturer(0x004c)
                     .setTxPower(-59)
                     .build()
                 val beaconParser: BeaconParser = BeaconParser()
-                    .setBeaconLayout("m:2-3=beac,i:4-19,i:20-21,i:22-23,p:24-24,d:25-25")
+                    .setBeaconLayout ("m:2-3=0215,i:4-19,i:20-21,i:22-23,p:24-24")
                 val beaconTransmitter = BeaconTransmitter(context, beaconParser)
                 beaconTransmitter.startAdvertising(beacon, object : AdvertiseCallback() {
                     override fun onStartFailure(errorCode: Int) {
